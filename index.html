@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirely: Inspire Your Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD9/f0AAAAAABcXFwBlZWUA////ABgYGADLy8sA8vLyAFNTUwD09PQA1tbWAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERREQQREYRERFERFRERBEREUREVEREERERRERUREQRERFERBRERBEREUoRFEERERERQhEUQRERERFEERdBERERETRJEURBERERGEcRFEEREREREREREREREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <h2>Inspirely</h2>
+    <div class="container">
+        <p id="quote">Loading...</p>
+        <span id="author">Loading...</span>
+        <div>
+            <button onclick="fetchAndDisplayQuote(maxQuoteLength)">
+                New Quote
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+        // const quote = document.getElementById("quote");
+        // const author = document.getElementById("author");
+
+
+        // const api_url = "https://api.quotable.io/random";
+        // async function getquote(url) {
+        //     const response = await fetch(url);
+        //     var data = await response.json();
+        //     console.log(data)
+        //     quote.innerHTML = data.content
+        //     author.innerHTML = data.author
+        // }
+
+        // getquote(api_url)
+
+
+        const apiUrl = 'https://api.quotable.io/random';
+
+// Function to fetch and display the quote if it meets the length requirement
+async function fetchAndDisplayQuote(maxLength) {
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    const data = await response.json();
+    const quote = data.content;
+    const author = data.author;
+    
+    // Check the length of the quote
+    if (quote.length < maxLength) {
+      document.getElementById('quote').innerHTML = quote;
+      document.getElementById('author').innerHTML = `— ${author}`;
+    } else {
+      document.getElementById('quote').innerHTML = `Sorry The quote is too long. It has ${quote.length} characters.`;
+      document.getElementById('author').innerHTML = '';
+    }
+  } catch (error) {
+    console.error('An error occurred:', error);
+    document.getElementById('quote').innerHTML = 'Failed to fetch quote.';
+    document.getElementById('author').innerHTML = '';
+  }
+}
+
+// Specify the maximum length for the quote
+const maxQuoteLength = 150;
+
+// Call the function
+fetchAndDisplayQuote(maxQuoteLength);
+    </script>
+</body>
+
+</html>
