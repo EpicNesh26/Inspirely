@@ -86,3 +86,57 @@ h2 {
     margin: 5px;
     cursor: pointer;
 }
+
+
+/* MOBILE PHONES */
+/* @media only screen and (min-width: 480px){
+    body{
+        background-size:cover;
+        max-height: fit-content;
+        max-height: 1300px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .container{
+        height: 205px;
+        width: 423px;
+        margin: auto;
+    }
+} */
+
+/* MOBILES LANDSCAPE */
+/* @media only screen and (min-width: 770px){
+    body{
+        background-color: red;
+    }
+} */
+
+/* TABLETS AND BIGGER PHONES */
+/* @media only screen and (min-width: 980px){
+    body{
+        background-color: green;
+    }
+} */
+
+
+/* LAPTOP AND BIGGER PC SCREENS */
+@media only screen and (min-width: 1200px){
+    body{
+        background-size:cover ;
+        max-height: fit-content;
+
+    }
+
+    h2{
+        font-size: 30px;
+        margin: 20px;
+        margin-bottom: 60px;
+    }
+    
+    .container p {
+        font-size: 30px;
+            }
+    .container button {
+        font-size: 18px;}
+}
