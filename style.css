@@ -52,7 +52,7 @@ h2 {
     position: relative;
     top: -60px;
     font-weight: bold;
-
+    font-size: 18px;
 }
 
 .container span::before {
@@ -88,22 +88,93 @@ h2 {
 }
 
 
-/* MOBILE PHONES */
-/* @media only screen and (min-width: 480px){
-    body{
-        background-size:cover;
-        max-height: fit-content;
-        max-height: 1300px;
+/* BASE MOBILES */
+@media only screen and (min-width:100px){
+    body {
+        background-size: 200vh;
     }
-    h2{
-        font-size: 16px;
+
+    h2 {
+        font-size: 15px;
+        margin: 12px;
+        margin-bottom: 30px;
     }
-    .container{
-        height: 205px;
-        width: 423px;
+
+    .container {
+        height: 230px;
+        width: 270px;
         margin: auto;
+        padding: 15px;
+        top: 50%;
     }
-} */
+
+    .container p {
+        font-size: 15px;
+        margin-bottom: 65px;
+        padding: 0px;
+        padding-top: 60px;
+    }
+
+    .container span {
+        margin-top: 10px;
+        top: -25px;
+        font-size: 10px;
+    }
+
+    .container div {
+        width: 100%;
+    }
+    .container button {
+        border-radius: 6px;
+        height: 25px;
+        width: 118px;
+        font-size: 10px;
+    }
+}
+
+/* MOBILE PHONES */
+@media only screen and (min-width: 480px){
+    body {
+        background-size: 200vh;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin: 12px;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        height: 230px;
+        width: 270px;
+        margin: auto;
+        padding: 15px;
+        top: 50%;
+    }
+
+    .container p {
+        font-size: 15px;
+        margin-bottom: 65px;
+        padding: 0px;
+        padding-top: 60px;
+    }
+
+    .container span {
+        margin-top: 10px;
+        top: -25px;
+        font-size: 10px;
+    }
+
+    .container div {
+        width: 100%;
+    }
+    .container button {
+        border-radius: 6px;
+        height: 25px;
+        width: 118px;
+        font-size: 10px;
+    }
+}
 
 /* MOBILES LANDSCAPE */
 /* @media only screen and (min-width: 770px){
@@ -116,8 +187,7 @@ h2 {
 /* TABLETS AND BIGGER PHONES */
 @media only screen and (min-width: 980px) {
     body {
-        background-size: cover;
-        max-height: fit-content;
+        background-size: 300vh;
     }
 
     h2 {
@@ -144,6 +214,7 @@ h2 {
     .container span {
         margin-top: 10px;
         top: -40px;
+        font-size: 18px;
     }
 
     .container div {
