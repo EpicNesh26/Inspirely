@@ -88,6 +88,8 @@ h2 {
 }
 
 
+
+
 /* BASE MOBILES */
 @media only screen and (min-width:100px){
     body {
@@ -95,7 +97,7 @@ h2 {
     }
 
     h2 {
-        font-size: 15px;
+        font-size: 18px;
         margin: 12px;
         margin-bottom: 30px;
     }
@@ -139,7 +141,7 @@ h2 {
     }
 
     h2 {
-        font-size: 15px;
+        font-size: 18px;
         margin: 12px;
         margin-bottom: 30px;
     }
